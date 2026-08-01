@@ -19,7 +19,7 @@ export async function loginRequest(user_email, user_password) {
   const res = await fetch(`${API_URL}/auth/login`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    // credentials: "include",
+    credentials: "include",
     body: JSON.stringify({ user_email, user_password }),
   });
 
